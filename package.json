@@ -1,0 +1,19 @@
+{
+  "name": "tp-azure",
+  "version": "1.0.0",
+  "private": true,
+  "description": "TP Azure Functions Node.js exécuté localement avec Azurite",
+  "main": "src/functions/*.js",
+  "engines": { "node": "22.x" },
+  "scripts": {
+    "start": "func start",
+    "storage": "azurite --location .azurite --debug .azurite/debug.log --blobHost 127.0.0.1 --queueHost 127.0.0.1 --tableHost 127.0.0.1"
+  },
+  "dependencies": {
+    "@azure/functions": "^4.0.0"
+  },
+  "devDependencies": {
+    "azure-functions-core-tools": "4.14.0",
+    "azurite": "^3.35.0"
+  }
+}
